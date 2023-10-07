@@ -50,15 +50,54 @@
 
 // non premitive / reference
 
-const heros = ["spiderman", "Ironman", "Thor", "Hulk"];
-let details = {
-    name: "tej",
-    age: "will not reveal"
-}
+// const heros = ["spiderman", "Ironman", "Thor", "Hulk"];
+// let details = {
+//     name: "tej",
+//     age: "will not reveal"
+// }
 
-const myfunction = function(){
-    console.log("bye");
-}
+// const myfunction = function(){
+//     console.log("bye");
+// }
 // console.log(typeof myfunction); // function but said Function Object 
 // console.log(typeof details);// Object
 // console.log(typeof heros); // Object
+
+//  ____________________________________________________
+
+// stack & heap 
+/* 
+how memory works in js 
+automatic garbage collection 
+primative & non primative / refernece 
+
+2 types of memories 
+
+stack for primative 
+string, number, boolean, biginit, symbol, null, undefined
+
+stack data sends copy 
+example below
+*/
+let exampleStackOne = "this is first example";
+let exampleStackTwo = exampleStackOne
+ // console.log(exampleStackTwo);
+exampleStackTwo = "this is second example";
+console.log(exampleStackOne);
+console.log(exampleStackTwo);
+
+// first we got copy of exampleStackOne into exampleStackTwo then we had changed data but it didn't got changed for exampleStackOne 
+
+//Heap = non primative / refernce 
+
+let userOne = {
+    name: "rex",
+    age: "unknown"
+}
+let userTwo = userOne;
+
+userTwo.age = 22;
+
+console.log(userOne);
+console.log(userTwo);
+// at non primitive / refernce if you take refernce from one object & edit it, it will changed for both example you take data from xyz to xyzz, if you change things in xyzz, xyz data will be changed to 
