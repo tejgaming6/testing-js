@@ -26,5 +26,14 @@ const exampleNumber = 89.6323
 //  console.log(Math.min(4,7,8,9,));
 //  console.log(Math.max(4,7,8,9,));
 
- console.log(Math.random());
- console.log(Math.floor(Math.random( 1 + 1)* 10));
+//  console.log(Math.random());
+//  console.log(Math.floor(Math.random(1)* 10) +1 );
+
+ const min = 10
+ const max = 30
+
+ Math.floor(Math.random(max - min * 10) + min);
+
+//  console.log(Math.random());
+
+ // math floor to lower the number example if your output is 21.8 it will make it 21, math random gives output from 0.00 to 1.00 you can multlipy((max - min) - min) to get desired range 
